@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>자바스크립트 문법</h3>
+    <p>var , let , const 변수명을 지정할 때 사용한다.</p>
+    <p>문자형, 숫자형, 자료형, 블리언 등이 존재한다.</p>
+    <P><span class="text"></span>님</P>
+    <p>출력 , 입력</p>
+    <p><span class="id-box"></span>님</p>
+
+
+    <script>
+        
+        let num1=1;
+        let num2=2;
+        document.querySelector('.text').innerHTML=num1;
+        // 텍스트를 인식하는건 "" , 숫자 변수
+        let x, y, z;
+        x = 5;
+        y = 6;
+        z = x+y;
+        document.write(z);
+
+        let name = prompt("당신의 아이디를 입력해주세요.");
+        // 입력
+        document.querySelector('.id-box').innerHTML=name;
+        // 출력
+        alert("이제부터 자다가 걸리면 주변사람들이 3년동안 재수가 없어집니다.");
+        // 출력
+
+        
+
+    </script>
+</body>
+</html>
