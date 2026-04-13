@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button class="login-btn" onclick="login()">로그인</button>
+
+    <p class="result"></p>
+
+    <script>
+        function login(){
+            let name = document.querySelector("#name").value;
+            if(name===""){
+                alert("이름을 입력해주세요");
+            } else{
+                document.querySelector(".result").innerHTML=name + "님 환영합니다."
+            }
+            // input을 가져올 때는 .value
+            // document.querySelector(".result").innerHTML=name+"님 반갑습니다!";
+        }
+        // 연산자
+        // + , - , * , / , % 계산식
+        // 대입연산자
+        // += , = , -= , *= , /= , %=
+        // 비교연산자
+        // == : 일치 , === : 같은 타입이면 일치 , != , !== , > , >= , <- , <
+        // 
+    </script>
+</body>
+</html>
