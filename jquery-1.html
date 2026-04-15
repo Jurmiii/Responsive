@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="color-text">혜인이가 오늘은 눈이 부었어요!</p>
+    <button class="btn1">버튼을 클릭!</button><br>
+    <p class="text-num">가은이가 꾸벅할 때마다 1분씩 수업시간은 연장하겠습니다.</p>
+    <button class="btn2">안졸았어요</button><br>
+    <button class="btn3">클릭하시오</button><br>
+    <img class="image" src="images/image.jpg" alt="메롱">
+    <div class="box" style="width: 100px; height: 100px;"></div>
+    <button class="btn4">❤️</button><br>
+    <div class="box1" style="width: 100px; height: 100px;border: 1px solid black; background-color: bisque;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // let btn1 = document.querySelector(".btn1");
+        $(".btn1").click(function(){
+            $(".color-text").css("color","red").css("background-color","blue");
+            $(".color-text").text("우리반 연수는 주식 1억을 보유하고 있습니다. 그것도 해외주식");
+            alert("가은이가 졸고 있다.")
+        })
+        $(".btn2").mouseover(function(){
+            $(".text-num").slideUp();
+        })
+        $(".btn3").click(function(){
+            $(".image").hide();
+        });
+        $(".box").mouseenter(function(){
+            $(this).css("background-color", "yellow");
+        })
+        $(".box").mouseleave(function(){
+            $(this).css("background-color", "white");
+        })
+        $(".btn4").click(function(){
+            let count = 0
+            $(this).text("좋아요 완료! 🤙");
+            $(this).css("color", "blue");
+        })
+        $("box1").mousedown(function(){
+            $(this).text("앗! 눌렸다!");
+            $(this).css("background-color", "red");
+        })
+        $("box1").mouseup(function(){
+            $(this).text("휴~ 놓아줬구나");
+            $(this).css("background", "blue");
+        })
+        // css 연속 사용 가능, javaScript 도 사용 가능
+    </script>
+</body>
+</html>

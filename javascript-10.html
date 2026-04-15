@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>요일을 구하는 방법</h2>
+
+    <h3>실시간 시계</h3>
+    <p class="clock"></p>
+    <script>
+        // let now = new Date();
+        // 0일요일 ~ 6 토요일
+        // let days = ["일", "월", "화", "수", "목", "금", "토"];
+
+        // let day = days[now.getDay()]
+        
+        // let year = now.getFullYear();
+        // let mon = now.getMonth()+1;
+        // let date = now.getDate();
+        // document.write(year+"-"+mon+"-"+date+day+"요일");
+        // 2026-04-15 (수요일)
+
+        let clock = document.querySelector(".clock");
+
+        function updateClock(){
+            let now = new Date();
+            let hour = now.getHours();
+            let min = now.getMinutes();
+            let sec = now.getSeconds();
+            clock.innerHTML = hour + ":" + min +":" + sec;
+            // 9:32:12
+        }
+        setInterval(updateClock,1000);
+    </script>
+</body>
+</html>
