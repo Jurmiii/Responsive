@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2depth</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .sub{
+            display: none;
+            background-color: blue;
+        }
+
+        .menu{
+            display: flex;
+            gap: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <a href="#" class="main">메뉴1</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="main">메뉴2</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="main">메뉴3</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <script src="js/libs/jquery.min.js"></script>
+    <script>
+        $(".menu > li").hover(function(){
+            // e.preventDefault();
+            // $(this).next('.sub').slideToggle();
+            $(this).find(".sub").stop().slideDown();
+        }, function () {
+            $(this).find(".sub").stop().slideUp();
+        });
+
+    </script>
+</body>
+</html>
