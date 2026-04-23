@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            /* collapse는 보더사이에 간격을 조정하는 값 */
+        }
+        /* table에는 셀 스페이싱, 셀 패딩이 기본적용되어있음 */
+        .ta tr>td:nth-child(1){
+            font-weight: bold;
+            width: 200px;
+            background-color: aliceblue;
+        }
+        /* th 보다 nth-child(1)이 요즘 가장 많이 쓰는 방식, width 값을 줘서 칸을 늘리기 편하다. */
+    </style>
+</head>
+<body>
+    <!-- tr, td 한 줄, 한 칸 기본개념 -->
+    <!-- th는 테이블의 제목 속성이라 폰트 굵게, 가운데 정렬 -->
+    <table class="ta">
+        <tr>
+            <td>지속가능경영</td>
+            <td>에너지(E)</td>
+        </tr>
+        <tr>
+            <td>한화에어로스페이스</td>
+            <td><span>23,150</span>(절감)만원</td>
+        </tr>
+        <!-- table 안에 숫자가 있다면 무.조.건 span으로 감싸줘야 한다!!!! -->
+    </table>
+</body>
+</html>

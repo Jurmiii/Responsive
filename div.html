@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        /* reset의 완전완전 기본!! 외워야 합니다 */
+
+        .container{
+            width: 1280px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .row{
+            display: flex;
+            gap: 20px;
+        }
+
+        .col-6{
+            background-color: aqua;
+            width: 50%;
+            height: 100px;
+        }
+
+        .col-4{
+            width: 33.33%;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+
+        .col-3{
+            width: 25%;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .col-12{
+            width: 100%;
+            height: 100px;
+            background-color: salmon;
+        }
+        /* 공통 css로 레이아웃을 12개 컬럼기준으로 %계산해서 미리 만들어놓고 내용 채우기 시작 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-12"></div>
+        </div>
+    </div>
+</body>
+</html>
