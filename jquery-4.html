@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+        // $(function () {
+        //     $("#accordion").accordion();
+        // });
+        $(function () {
+            $(".qna").accordion({
+                active: false,
+                collapsible: true
+            });
+
+            $(document).tooltip();
+        });
+    </script>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .qna-title {
+            background-color: pink;
+            border: 1px solid pink;
+        }
+
+        .ui-accordion .ui-accordion-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+            order: 2;
+            /* 뒤로 보내기 */
+            margin-left: auto;
+            /* 오른쪽 정렬 */
+        }
+
+        .ui-accordion-header-icon {
+            transition: transform 0.3s;
+        }
+
+        .ui-accordion-header-active .ui-accordion-header-icon {
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-6">
+                <h3>자주묻는질문</h3>
+            </div>
+            <div class="col-6">
+                <div class="qna">
+                    <h3 class="qna-title">태경이는 오늘 점심을 사준다고 했나요?</h3>
+                    <div class="qnd-body">
+                        <p>태경이는 오늘 <a href="#" title="사줘?">점심을</a> 사줄 수가 없답니다.</p>
+                        <p>단, 태경이는 오늘도 지각을 했기 때문에 벌금 3만원을 부과하겠습니다.</p>
+                    </div>
+                    <h3 class="qna-title">태경이는 오늘 점심을 사준다고 했나요?</h3>
+                    <div class="qnd-body">
+                        <p>태경이는 오늘 점심을 사줄 수가 없답니다.</p>
+                        <p>단, 태경이는 오늘도 지각을 했기 때문에 벌금 3만원을 부과하겠습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
