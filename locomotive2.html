@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/bundled/locomotive-scroll.css" />
+
+    <style>
+        /* body {
+            margin: 0;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .sec1 {
+            background-color: purple;
+        }
+
+        p {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: 0.5s;
+        }
+
+
+        p.active {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+
+        /* SCSS 변수와 중첩 규칙을 제거하고 순수 CSS로 변환했습니다. */
+        :root {
+            --blue-text: #2F2FA2;
+            --white-text: #fff;
+            --orange-text: #FF5803;
+            --desktop: 1200px;
+            --laptop: 1024px;
+            --tablet: 768px;
+            --phone: 480px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'League Spartan', sans-serif;
+            transition: 0.3s ease-out;
+            overflow-x: hidden;
+            max-width: 100%;
+            overscroll-behavior: none;
+        }
+
+        section:not(#sectionPin) {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 2rem;
+            padding: 50px 10vw;
+            margin: auto;
+            place-items: center;
+            background: var(--blue-text);
+            color: var(--white-text);
+        }
+
+        img {
+            height: 80vh;
+            width: auto;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-family: 'Libre Baskerville', serif;
+            line-height: 1;
+            margin-bottom: 1rem;
+            position: absolute;
+            top: 10vw;
+            left: 10vw;
+            z-index: 4;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 16vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        h2 {
+            font-size: 2rem;
+            max-width: 400px;
+        }
+
+        .credit {
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .credit a {
+            color: var(--white-text);
+        }
+
+        #sectionPin {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background: var(--white-text);
+            color: var(--blue-text);
+        }
+
+        .pin-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 10vw;
+            gap: 2rem;
+        }
+
+        .pin-text {
+            flex-shrink: 0;
+            width: 24rem;
+            line-height: 1.6;
+            color: #032f35;
+        }
+
+        .pin-wrap {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            min-width: max-content;
+            will-change: transform;
+        }
+
+        .pin-wrap img {
+            flex-shrink: 0;
+            width: 60vw;
+            height: 75vh;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        section:not(#sectionPin) p {
+            position: absolute;
+            bottom: 10vw;
+            right: 10vw;
+            width: 240px;
+            line-height: 1.5;
+            color: #fff;
+            z-index: 10;
+        }
+
+        .footer {
+            background: url("https://imgur.com/psBJGVk.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                background-position: center;
+            }
+
+            .e-benny {
+                width: 300px;
+                height: 300px;
+                transform: translateY(70px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- locomotive-scroll이 동작하려면 data-scroll-container가 필요합니다 -->
+    <div class="container" data-scroll-container>
+        <section class="sec1" data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+            <h1 data-scroll data-scroll-speed="1">
+                <span>BlueBenny</span>
+                <span>Media</span>
+            </h1>
+            <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">Home to the catalog of one of the most
+                celebrated photographers in the entertainment industry, E-BENNY.</p>
+        </section>
+        <section id="sectionPin">
+            <div class="pin-content">
+                <p class="pin-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <div class="pin-wrap">
+                    <img src="images/1.jpg" alt="Image 1">
+                    <img src="images/2.jpg" alt="Image 2">
+                    <img src="images/3.jpg" alt="Image 3">
+                    <img src="images/4.jpg" alt="Image 4">
+                    <img src="images/5.jpg" alt="Image 5">
+                </div>
+            </div>
+        </section>
+        <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"
+            style="background:url('https://imgur.com/psBJGVk.gif'); background-size: cover; background-repeat: no-repeat;">
+            <img src="https://pbs.twimg.com/media/EtV4MTqXUAIRIQH?format=jpg&name=large" alt="E-BENNY" class="e-benny">
+            <img src="images/6.jpg" alt="">
+            <h2 data-scroll data-scroll-speed="1" class="credit">
+                <a href="https://www.github.com/E-Benny/" target="_blank">Designed by<br> E-BENNY</a>
+            </h2>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/bundled/locomotive-scroll.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const pageContainer = document.querySelector(".container");
+        const sectionPin = document.querySelector("#sectionPin");
+        const pinContent = document.querySelector(".pin-content");
+        const pinWrap = document.querySelector(".pin-wrap");
+        const pinText = document.querySelector(".pin-text");
+        const pinImages = document.querySelectorAll(".pin-wrap img");
+
+        // LocomotiveScroll 초기화
+        const scroller = new LocomotiveScroll({
+            el: pageContainer,
+            smooth: true
+        });
+
+        // LocomotiveScroll 초기 업데이트
+        scroller.update();
+
+        // ScrollTrigger.scrollerProxy 설정
+        // pinType을 "transform"으로 설정 (LocomotiveScroll 사용 시 권장)
+        ScrollTrigger.scrollerProxy(pageContainer, {
+            scrollTop(value) {
+                return arguments.length
+                    ? scroller.scrollTo(value, 0, 0)
+                    : scroller.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return {
+                    top: 0,
+                    left: 0,
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                };
+            },
+            pinType: "transform" // LocomotiveScroll 사용 시 "transform" 권장
+        });
+
+        // LocomotiveScroll scroll 이벤트와 ScrollTrigger 연동
+        scroller.on("scroll", ScrollTrigger.update);
+
+        // 수평 스크롤 초기화 함수
+        function initHorizontalScroll() {
+            // 정확한 스크롤 길이 계산
+            const contentWidth = pinContent.offsetWidth;
+            const pinWrapWidth = pinWrap.scrollWidth;
+            const textWidth = pinText.offsetWidth;
+            const availableWidth = contentWidth - textWidth - 32; // 32px는 gap 값
+            const horizontalScrollLength = pinWrapWidth - availableWidth;
+
+            if (horizontalScrollLength <= 0) {
+                console.warn("Horizontal scroll length is invalid");
+                return;
+            }
+
+            // 이미지 개수에 따른 snap 값 계산
+            const imageCount = pinImages.length;
+            const snapTo = imageCount > 1 ? 1 / (imageCount - 1) : 1;
+
+            // 가로 스크롤 애니메이션 정의 (paused: true로 ScrollTrigger가 제어)
+            const horizontalAnimation = gsap.to(".pin-wrap", {
+                x: -horizontalScrollLength,
+                ease: "none",
+                paused: true
+            });
+
+            // ScrollTrigger 생성 (pin과 animation 분리)
+            ScrollTrigger.create({
+                trigger: "#sectionPin",
+                scroller: pageContainer,
+                start: "top top",
+                end: "+=" + horizontalScrollLength,
+                pin: true,
+                pinSpacing: true,
+                scrub: true, // smooth scrubbing
+                animation: horizontalAnimation,
+                snap: {
+                    snapTo: snapTo,
+                    duration: 0.3,
+                    ease: "power1.inOut"
+                },
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                onUpdate: (self) => {
+                    // 디버깅용 (필요시 활성화)
+                    // console.log("Progress:", self.progress);
+                }
+            });
+
+            // ScrollTrigger 새로고침
+            ScrollTrigger.refresh();
+
+            // 새로고침 후 LocomotiveScroll 업데이트
+            scroller.update();
+        }
+
+        // 모든 이미지 로딩 완료 후 실행
+        window.addEventListener("load", () => {
+            let loadedImages = 0;
+
+            // 이미지 로드 상태 확인
+            pinImages.forEach((img) => {
+                if (img.complete) {
+                    loadedImages++;
+                } else {
+                    img.addEventListener("load", () => {
+                        loadedImages++;
+                        if (loadedImages === pinImages.length) {
+                            setTimeout(() => {
+                                scroller.update();
+                                initHorizontalScroll();
+                            }, 100);
+                        }
+                    });
+
+                    img.addEventListener("error", () => {
+                        loadedImages++;
+                        if (loadedImages === pinImages.length) {
+                            setTimeout(() => {
+                                scroller.update();
+                                initHorizontalScroll();
+                            }, 100);
+                        }
+                    });
+                }
+            });
+
+            // 모든 이미지가 이미 캐시된 경우
+            if (loadedImages === pinImages.length) {
+                setTimeout(() => {
+                    scroller.update();
+                    initHorizontalScroll();
+                }, 100);
+            }
+        });
+
+        // ScrollTrigger 새로고침 시 LocomotiveScroll 업데이트
+        ScrollTrigger.addEventListener("refresh", () => {
+            scroller.update();
+        });
+
+        // 윈도우 리사이즈 시 ScrollTrigger 새로고침
+        window.addEventListener("resize", () => {
+            scroller.update();
+            ScrollTrigger.refresh();
+        });
+    </script>
+</body>
+
+</html>
